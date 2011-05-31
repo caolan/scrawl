@@ -6,7 +6,7 @@ var fix_dir = __dirname + '/fixtures';
 
 
 function test_basic_js(result, test) {
-    test.equal(result.length, 6);
+    test.equal(result.length, 7);
     test.same(result[0], {
             description: 'Single line comment with no tags',
             description_html: '<p>Single line comment with no tags</p>'
@@ -47,6 +47,12 @@ function test_basic_js(result, test) {
             two: {type: 'Boolean', description: '(optional)'}
         },
         returns: 'Array'
+    });
+    test.same(result[6], {
+        description: 'Single param',
+        description_html: '<p>Single param</p>',
+        param: '{Function} callback',
+        params: {callback: {type: 'Function', description: undefined}}
     });
 };
 

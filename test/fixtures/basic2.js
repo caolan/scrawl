@@ -42,3 +42,9 @@
  * @param {Boolean} two (optional)
  * @returns {Array}
  */
+
+/**
+ * Single param
+ *
+ * @param {Function} callback
+ */
