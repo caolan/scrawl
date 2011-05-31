@@ -25,9 +25,9 @@ function test_basic_js(result, test) {
     });
     test.same(result[3], {
         description: '*Markdown* inside description tags ' +
-                     '<div>test</div>\nanother paragraph',
+                     '<div>test</div>\n\nanother paragraph',
         description_html: '<p><em>Markdown</em> inside description '+
-                          'tags <div>test</div>\nanother ' +
+                          'tags <div>test</div></p>\n\n<p>another ' +
                           'paragraph</p>',
         'tag_1': 'some value',
         'tag2': 'test',
