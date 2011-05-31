@@ -13,11 +13,11 @@ function test_basic_js(result, test) {
     });
     test.same(result[1], {
         description: 'Multi-line comment\nalso with no tags',
-        description_html: '<p>Multi-line comment<br />also with no tags</p>'
+        description_html: '<p>Multi-line comment\nalso with no tags</p>'
     });
     test.same(result[2], {
         description: 'Multi-line\nwith some single-line tags',
-        description_html: '<p>Multi-line<br />with some single-line ' +
+        description_html: '<p>Multi-line\nwith some single-line ' +
                           'tags</p>',
         'tag_1': 'some value',
         'tag2': 'test',
@@ -27,7 +27,7 @@ function test_basic_js(result, test) {
         description: '*Markdown* inside description tags ' +
                      '<div>test</div>\nanother paragraph',
         description_html: '<p><em>Markdown</em> inside description '+
-                          'tags <div>test</div><br />another ' +
+                          'tags <div>test</div>\nanother ' +
                           'paragraph</p>',
         'tag_1': 'some value',
         'tag2': 'test',
