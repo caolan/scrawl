@@ -63,13 +63,19 @@ exports['parse basic.js'] = function (test) {
 };
 
 exports['parse_modules basic.js, basic2.js'] = function (test) {
-    var modules = [fix_dir + '/basic.js', fix_dir + '/basic2.js'];
     scrawl.parseModules(fix_dir, function (err, results) {
         if (err) {
             return test.done(err);
         }
-        test_basic_js(results[modules[0]], test);
-        test_basic_js(results[modules[1]], test);
+
+        test_basic_js(results[0].comments, test);
+        test.equal(results[0].path, fix_dir + '/basic.js');
+        test.equal(results[0].name, 'basic');
+
+        test_basic_js(results[1].comments, test);
+        test.equal(results[1].path, fix_dir + '/basic2.js');
+        test.equal(results[1].name, 'basic2');
+
         test.done();
     });
 };
