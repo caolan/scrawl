@@ -41,10 +41,10 @@ function test_basic_js(result, test) {
     test.same(result[5], {
         description: 'Parameters and return test',
         description_html: '<p>Parameters and return test</p>',
-        param: ['{String} one', '{Boolean} two (optional)'],
+        param: ['{String} one', '{type with spaces} two (optional)'],
         params: [
             {name: 'one', type: 'String', description: undefined},
-            {name: 'two', type: 'Boolean', description: '(optional)'}
+            {name: 'two', type: 'type with spaces', description: '(optional)'}
         ],
         returns: 'Array'
     });

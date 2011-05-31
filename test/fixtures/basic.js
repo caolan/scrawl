@@ -39,7 +39,7 @@
  * Parameters and return test
  *
  * @param {String} one
- * @param {Boolean} two (optional)
+ * @param {type with spaces} two (optional)
  * @returns {Array}
  */
 
