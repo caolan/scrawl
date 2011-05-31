@@ -42,17 +42,17 @@ function test_basic_js(result, test) {
         description: 'Parameters and return test',
         description_html: '<p>Parameters and return test</p>',
         param: ['{String} one', '{Boolean} two (optional)'],
-        params: {
-            one: {type: 'String', description: undefined},
-            two: {type: 'Boolean', description: '(optional)'}
-        },
+        params: [
+            {name: 'one', type: 'String', description: undefined},
+            {name: 'two', type: 'Boolean', description: '(optional)'}
+        ],
         returns: 'Array'
     });
     test.same(result[6], {
         description: 'Single param',
         description_html: '<p>Single param</p>',
         param: '{Function} callback',
-        params: {callback: {type: 'Function', description: undefined}}
+        params: [{name: 'callback', type: 'Function', description: undefined}]
     });
 };
 
