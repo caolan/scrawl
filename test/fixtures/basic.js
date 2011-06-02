@@ -40,6 +40,7 @@
  *
  * @param {String} one
  * @param {type with spaces} two (optional)
+ * @param {String} three - some description
  * @returns {Array}
  */
 

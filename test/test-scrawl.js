@@ -41,10 +41,15 @@ function test_basic_js(result, test) {
     test.same(result[5], {
         description: 'Parameters and return test',
         description_html: '<p>Parameters and return test</p>',
-        param: ['{String} one', '{type with spaces} two (optional)'],
+        param: [
+            '{String} one',
+            '{type with spaces} two (optional)',
+            '{String} three - some description'
+        ],
         params: [
-            {name: 'one', type: 'String', description: undefined},
-            {name: 'two', type: 'type with spaces', description: '(optional)'}
+            {name: 'one', type: 'String', description: ''},
+            {name: 'two', type: 'type with spaces', description: '(optional)'},
+            {name: 'three', type: 'String', description: 'some description'}
         ],
         returns: 'Array'
     });
@@ -52,7 +57,7 @@ function test_basic_js(result, test) {
         description: 'Single param',
         description_html: '<p>Single param</p>',
         param: '{Function} callback',
-        params: [{name: 'callback', type: 'Function', description: undefined}]
+        params: [{name: 'callback', type: 'Function', description: ''}]
     });
 };
 
