@@ -49,3 +49,15 @@
  *
  * @param {Function} callback
  */
+
+/**
+ * @tagname Example test
+ *
+ * ```javascript
+ * var e = Example();
+ * ```
+ */
+
+/**
+ * @tagonly Foo
+ */
