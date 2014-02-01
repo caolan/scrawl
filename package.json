@@ -4,6 +4,6 @@
     "maintainers": [
         {"name": "Caolan McMahon", "web": "https://github.com/caolan"}
     ],
-    "version": "0.0.4",
+    "version": "0.0.5",
     "main": "lib/scrawl.js"
 }
